@@ -1,0 +1,681 @@
+*,
+*::before,
+*::after {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ b {
+    font-size: 30px;
+ }
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+    color: #8f8e8e;
+}
+
+
+
+html,
+body {
+    -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+
+   
+    line-height: 1;
+    font-size: 16px;
+    background-color: rgb(0, 0, 0);
+    color: #595959 ;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    overflow-x:unset;
+}
+
+body._lock {
+    overflow: hidden;
+}
+
+.wrapper {
+
+    min-height: 100%;
+}
+
+.page {
+padding: 90px 0px 30px 0px;
+
+}
+
+.page__section {
+padding: 30px;
+max-width:  1200px;
+margin: 0px auto;
+}
+
+.page__section_1 {
+    background-color: rgb(0, 0, 0);
+} 
+
+.page__section_2 {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+  
+    
+} 
+
+.page__section_3 {
+      background-color: rgb(0, 0, 0);
+}
+
+.page__section_4 {
+    background-color: rgb(0, 0, 0);
+
+}
+
+.page__title {
+    font-size: 40px;
+    margin:  0px 0px 20px 0px;
+}
+
+.page__text {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.page__text p {
+    margin:  0px 0px 20px 0px;
+}
+.page__sub-title{
+    font-size: 30px;
+    margin:  0px 0px 20px 0px;
+}
+
+.header {
+  
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgb(7, 7, 7);
+    opacity: 0.9;
+}
+.header__container {
+
+    max-width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    padding: 0px 30px;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+}
+.header__logo {
+    /* border-radius: 50%; */
+    color: #8f8e8e;
+    position: relative;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+   
+    font-weight: bolder;
+}
+
+
+.menu__list > li {
+    margin:  0px;
+    position: relative;
+}
+
+.menu__link {
+    color: #8f8e8e;
+    font-size:20px;
+    padding: 10px;
+    
+}
+
+.menu__link:hover {
+    text-decoration: underline;
+    text-decoration-color:#fa0000;
+    line-height:2; 
+    
+}
+
+
+.menu__arrow {
+    display: none;
+}
+/*-------------------------------------------------------------------*/
+
+body._pc .menu__list > li:hover .menu__sub-list {
+    opacity: 1;
+    visibility: visible;
+    transform:  translate(0px, 0px);
+    pointer-events: all;
+
+}
+
+
+body._touch .menu__list > li._active .menu__sub-list {
+    opacity: 1;
+    visibility: visible;
+    transform:  translate(0px, 0px);
+    pointer-events: all;
+
+}
+
+
+body._touch .menu__list > li._active .menu__arrow {
+    transform: rotate(-180deg);
+}
+
+
+
+body._touch .menu__arrow{
+    display: block;
+    width: 0;
+    margin: 0px 0px 0px 5px;
+    height: 0;
+    transition:  transform 0.3s ease 0s ;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #fff;
+}
+
+
+body._touch .menu__list > li {
+    display: flex;
+    align-items: center;
+}
+
+body._touch .menu__link {
+    flex: 1 1 auto;
+}
+
+/*----------------------------------------------------------------*/
+
+
+.menu__sub-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 15px;
+    background-color: black;
+    min-width: 200px;
+}
+
+
+.menu__sub-list > li {
+    margin:  0px 0px 10px 0px;
+}
+
+
+.menu__sub-list > li:last-child {
+    margin:  0;
+}
+.menu__sub-link {
+    color: #fff;
+}
+
+@media (min-width: 767px) {
+    .page{
+        overflow: hidden;
+        overflow-x: hidden;
+    }
+    .menu__list {
+        display: flex;
+        align-items: center;
+    }
+    .menu__list > li {
+        padding: 10px 0px;
+    }
+    .menu__sub-list{
+        transform: translate(0px, 10%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0,3s ease 0s;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .page{
+        overflow: hidden;
+        overflow-x: hidden;
+    }
+
+    .form-popup {
+     height: 100%;
+     width: 100%;
+      }
+    .slade {
+        min-width:  70%; 
+    }
+    html,body{
+        box-sizing: border-box;
+        display: flex;
+        text-align: center;
+        margin: auto;
+    }
+    .menu__icon {
+        z-index: 5;
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+    }
+    .menu__icon span,
+    .menu__icon::before,
+    .menu__icon::after {
+        left: 0px;
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: #fff;
+    }
+    .menu__icon::before,
+    .menu__icon::after {
+        content: "";
+    }
+    .menu__icon::before{
+        top: 0;
+    }
+    .menu__icon::after {
+        bottom: 0;
+    }
+    .menu__icon span{
+     top: 50%;
+     transform: scale(1) translate(0px, -50%);
+    }
+
+    .menu__icon._active span{
+        transform: scale(0) translate(0px, -50%);
+    }
+    
+    .menu__icon._active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+
+        
+    .menu__icon._active::after {
+        bottom: 50%;
+        transform: rotate( 45deg) translate(0px, 50%);
+    }
+    .menu__body {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0,0,  0.9);
+        padding: 100px 30px 30px 30px;
+        transition: left 0.3s ease 0s;
+        overflow:auto ;
+    }
+    .menu__body._active{
+        left: 0px;
+    }
+
+    .menu__body .menu__body ::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        top:0;
+        left: 0;
+        height: 70px;
+        z-index: 2;
+    }
+    .menu__list > li {
+        flex-wrap: wrap;
+        margin: 0px 0px 30px 0px;
+    }
+    .menu__list > li:last-child{
+        margin-bottom: 0px;
+    }
+    .menu__list > li._active .menu__sub-list{
+        display: block;    
+    }
+
+    .menu__link {
+        font-size: 24px;
+    }
+    .menu__sub-list{
+        position: relative;
+        background-color: #fff;
+        flex: 1 1 100%;
+        margin: 20px 0px 0px 0px;
+        display: none;
+        }
+    .menu__sub-link{
+        font-size: 24px;
+        color: black;
+    }
+    .menu_ssylki {
+        position: relative;
+        display: none;
+     
+    }
+
+    .tablink {
+        
+        font-size: 14px;
+    }
+}
+/* ------------------------------------------------------------SECTION 0----------------------------------------------------------------------- */
+.page__section {
+    text-align: center
+}
+.page__logoCofee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  
+}
+
+.page__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+
+}
+
+.app{
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 15px;
+    box-shadow: 3px 3px 0 rgb(204, 1, 1);
+    font-size: 20px;      }
+
+.google {
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 15px;
+    box-shadow: 3px 3px 0 rgb(204, 1, 1);
+    font-size: 20px;    
+}
+
+.app:active { 
+    transform: scale(0.98); 
+    /* Scaling button to 0.98 to its original size */ 
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+    /* Lowering the shadow */ 
+} 
+
+.google:active { 
+    transform: scale(0.98); 
+    /* Scaling button to 0.98 to its original size */ 
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+    /* Lowering the shadow */ 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------МЕНЮ------------------------------------------------------------ */
+
+
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+  }
+  
+  /* Стиль cсылок на вкладку */
+  .tablink {
+    background-color: #000000;
+    color: rgb(150, 43, 43);
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+  /* Стиль содержимого вкладки (и добавить высоту: 100% для полного содержимого страницы) */
+  .tabcontent {
+    color: rgb(118, 118, 118);
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+  }
+  
+  #Home {background-color: rgb(0, 0, 0);}
+  #News {background-color: rgb(0, 0, 0);}
+  #Contact {background-color: rgb(0, 0, 0);}
+  #About {background-color: rgb(0, 0, 0);}
+
+  .menu__cofee {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    margin-top: 30px;
+  }
+  
+/* -------------------------------------------КОНЕЦ МЕНЮ------------------------------------------------------------ */
+
+
+/* ---------------------------------------------Слайдер------------------------------------------------------------------------ */
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 400px;
+  position: relative;
+
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides1 {
+    display: none;
+    border-radius: 20px;
+   
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+
+
+.dot1 {
+    cursor: pointer;
+    height: 5px;
+    width: 80px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius:0;
+    display: inline-block;
+    transition: background-color 0.9s ease;
+    margin-bottom: 150px;
+  }
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* ---------------------------------------Конец слайдера--------------------------------------------- */
+
+/*---------------------------------------ФОРМА ДЛЯ ЗАПОЛНЕНИЯ-------------------------------------------------- */
+
+*{
+    box-sizing: border-box;
+}
+/* Кнопка, используемая для открытия контактной формы - фиксируется в нижней части страницы */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: relative;
+  bottom: 23px;
+  width: 280px;
+}
+
+/* Всплывающая форма-скрыта по умолчанию */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  z-index: 9;
+}
+
+/* Добавить стили для контейнера формы */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  border:3px solid #f50606;
+  background-color: rgb(0, 0, 0);
+}
+
+/* Поля ввода полной ширины */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Когда входы получают фокус, сделайте что-нибудь */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Установите стиль для кнопки отправить/войти */
+.form-container .btn {
+  background-color: rgb(22, 22, 238);
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Добавить красный цвет фона для кнопки "Отмена" */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Добавить некоторые эффекты наведения на кнопки */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+    color:    rgb(26, 0, 153);
+}
+textarea { font-size: 18px; }
+
